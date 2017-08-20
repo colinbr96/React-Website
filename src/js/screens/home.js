@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import Scroll from 'react-scroll';
+
 import NavBar from '../components/navbar';
+import {COLORS} from '../defines';
+import OthelloImage from '../../images/othello.jpg';
+import HangmanImage from '../../images/hangman.jpg';
 
 export default class HomeScreen extends Component {
 
@@ -48,7 +52,8 @@ export default class HomeScreen extends Component {
                     activeAnchor={this.state.active_anchor}
                     pageAnchors={[
                         customScrollLink("welcome", "Welcome"),
-                        customScrollLink("about", "About Me")
+                        customScrollLink("about", "About Me"),
+                        customScrollLink("projects", "Projects")
                     ]}
                 />
 
@@ -110,6 +115,81 @@ export default class HomeScreen extends Component {
                                     Friendship, Sound Learning, and Moral Rectitude. My current position is the Public
                                     Relations Officer on the fraternity's 2015-2016 leadership council.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </Scroll.Element>
+
+                {/* Projects */}
+                <Scroll.Element name="projects">
+                    <div className="container-fluid" style={{background: COLORS.background.dark_gray, paddingTop: "30px"}}>
+                        <div className="container" style={{color: COLORS.foreground.light_gray}}>
+                            <h1 className="text-center">My Projects</h1>
+                            <p className="text-center">
+                                <span className="glyphicon glyphicon-info-sign"/>
+                                &nbsp;These selections only highlight two of my favorite accomplishments.
+                                <a className="light">View all of my projects instead.</a>
+                            </p>
+                            <br/>
+                            <div className="row">
+
+                                {/* 1st: Othello */}
+                                <div className="col-md-6" style={{paddingBottom: "50px"}}>
+                                    <a>
+                                        <img
+                                            src={OthelloImage}
+                                            className="img-responsive img-rounded"
+                                            alt="Othello made with Python"
+                                            style={{margin: "0 auto", boxShadow: "2px 4px 5px #242424"}}
+                                        />
+                                    </a>
+                                    <h3>Othello Project</h3>
+                                    <p style={{paddingBottom: "10px"}}>
+                                        In one of my Information &amp; Computer Science courses at UCI,
+                                        &#8220;Programming with Software Libraries&#8221;, we learned how to code
+                                        graphical user interfaces in Python using a library called TK. We were
+                                        assigned a project to develop the game&nbsp;
+                                        <a className="light" href="https://en.wikipedia.org/wiki/Reversi" target="_blank">Othello</a>
+                                        &nbsp;and implement it using a responsive interface. This program is the result
+                                        of two weeks of my hard work and dedication.
+                                    </p>
+                                    <center>
+                                        <a>
+                                            <button type="button" className="btn btn-primary">
+                                                Learn More
+                                            </button>
+                                        </a>
+                                    </center>
+                                </div>
+
+                                 {/* 2nd: Hangman */}
+                                <div className="col-md-6" style={{paddingBottom: "50px"}}>
+                                    <a>
+                                        <img
+                                            src={HangmanImage}
+                                            className="img-responsive img-rounded"
+                                            alt="Hangman made with C++"
+                                            style={{margin: "0 auto", boxShadow: "2px 4px 5px #242424"}}
+                                        />
+                                    </a>
+                                    <h3>Hangman</h3>
+                                    <p style={{paddingBottom: "10px"}}>
+                                        Although I have spent many hours writing C++ code that implements data
+                                        structure classes and helper functions for homework assignments, before
+                                        starting this project, I had yet experienced the act of sitting down to
+                                        write something <i>fun</i> in C++. I poked around the web seeking simple
+                                        games that could be programmed for command line interfaces. Hangman was one
+                                        of the results that piqued my interest. This project is the result of a few
+                                        days of weekend/vacation spare time.
+                                    </p>
+                                    <center>
+                                        <a>
+                                            <button type="button" className="btn btn-primary">
+                                                Learn More
+                                            </button>
+                                        </a>
+                                    </center>
+                                </div>
                             </div>
                         </div>
                     </div>
