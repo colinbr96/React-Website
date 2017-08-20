@@ -34,6 +34,7 @@ export default class HomeScreen extends Component {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={-50}
                     onSetActive={() => this.setState({active_anchor: id})}
                 >
                     {label}
@@ -53,7 +54,7 @@ export default class HomeScreen extends Component {
 
                 {/* Welcome */}
                 <Scroll.Element name="welcome">
-                    <div className="jumbotron" style={{padding: "60px 0 20px 0"}}>
+                    <div className="jumbotron" style={{padding: "60px 0 20px 0", marginBottom: 0}}>
                         <div className="container">
                             <h1>Welcome</h1>
                             <p>Hi, my name is Colin. I&rsquo;m a Computer Science student attending UC Irvine.</p>
@@ -63,7 +64,7 @@ export default class HomeScreen extends Component {
 
                 {/* About Me */}
                 <Scroll.Element name="about">
-                    <div className="container" style={{paddingBottom: "50px"}}>
+                    <div className="container" style={{padding: "30px 0 50px 0"}}>
                         <img
                             className="img-responsive img-circle"
                             src={profile_pic_url}
